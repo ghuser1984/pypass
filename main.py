@@ -4,5 +4,12 @@ def enter_creds():
     pssw=input("Your password: ")
     return(mail,acct,pssw)
 
+def check_creds(lst):
+    if len(lst)==3:
+        print("mail: {}\nacct: {}\npassw: {}\n".format(lst[0],lst[1],lst[2]))
+    else:
+        print("Only {} credential featurs provided".format(len(lst)))
+
+
 creds= enter_creds()
-print("mail: {}\nacct: {}\npassw: {}\n".format(creds[0],creds[1],creds[2]))
+check_creds(creds)
