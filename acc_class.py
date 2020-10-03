@@ -41,7 +41,7 @@ class Acc(object):
         pswwd=str(psswd)
         if len(pswwd)==0:
             print("No password provided")
-        elif len(pswwd)<=6:
+        elif len(pswwd)<8:
             print("Password too short")
         else:
             self.psswd=pswwd
