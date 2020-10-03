@@ -1,3 +1,5 @@
+import random, string
+
 def enter_creds():
     mail=input("Your email: ")
     acct=input("Your account: ")
@@ -10,6 +12,15 @@ def check_creds(lst):
     else:
         print("Only {} credential featurs provided".format(len(lst)))
 
+def gen_psswd():
+    tmpl=list(string.ascii_letters+string.digits)
+    pswd=''.join(random.sample(tmpl,k=random.randint(8,12)))
+    return(pswd)
 
-creds= enter_creds()
-check_creds(creds)
+def chk_psswd(psswd):
+    pass
+
+#creds= enter_creds()
+#check_creds(creds)
+for i in range(10):
+    print(gen_psswd())
