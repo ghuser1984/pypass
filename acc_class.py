@@ -5,11 +5,12 @@ def check_email(email):
     pass
 
 class Acc(object):
+    #account class constructor 
     def __init__(self,page,email,psswd):
         assert type(page)==str, 'Incorrect email type, should be string'
         assert type(email)==str, 'Incorrect email type should be string'
         self.page=page
-        self.email=[]
+        self.email=[] #using list here in case there is more than one email associated with this page
         self.psswd=psswd
         self.email.append(email)
 
@@ -19,7 +20,7 @@ class Acc(object):
     
     @psswd.setter
     def psswd(self, psswd):
-        assert len(psswd)>=8, "password must be at least 6 characters long"
+        assert len(psswd)>=8, "password must be at least 8 characters long"
         self.__psswd=psswd
 
     def __repr__(self):
